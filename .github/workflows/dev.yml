@@ -18,8 +18,7 @@ jobs:
       - name: Set up python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.9
-      
+          python-version: '3.9' 
 # Install the Databricks on cli 
 
       - name: Install Databricks CLI
