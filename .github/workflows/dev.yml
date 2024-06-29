@@ -1,0 +1,26 @@
+# This is a workflow for Voltron Project  with Actions
+name: Dev CI/CD Workflow
+on:
+  push:
+    branches:
+      - 'developmentbranch'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:	
+      - uses: actions/checkout@v3
+      - name: install-aws-cli
+        uses: unfor19/install-aws-cli-action@v1
+        with:
+          version: 2
+# Install the python 
+
+      - name: Set up python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      
+# Install the Databricks on cli 
+
+      - name: Install Databricks CLI
+        run: pip install databricks-cli
