@@ -12,9 +12,7 @@ jobs:
       - name: install-aws-cli
         uses: unfor19/install-aws-cli-action@v1
         with:
-          version: 2
-# Install the python 
-
+          version: '2'
       - name: Set up python
         uses: actions/setup-python@v4
         with:
